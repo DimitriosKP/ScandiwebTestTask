@@ -1,0 +1,18 @@
+<?php
+
+    defined('DB_HOST') || define('DB_HOST', 'localhost');
+        defined('DB_USER') || define('DB_USER', 'id19948642_dkpfts');
+        defined('DB_PASS') || define('DB_PASS', 'XhXb5O10E8sZee!');
+        defined('DB_NAME') || define('DB_NAME', 'id19948642_products');
+
+        function dd($var) {
+            echo '<pre>';
+            print_r($var);
+            die();
+        }
+
+        include 'autoloader.inc.php';
+
+        $database = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+
+        session_start();
