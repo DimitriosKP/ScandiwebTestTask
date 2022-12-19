@@ -6,7 +6,8 @@ $(document).ready(function () {
         },
             function (data) {
                 if (data == "invalid") {
-                    $("#sku_check").text("This SKU is already exists!")
+                    $("#sku_check").text("*This SKU is already exists!")
+                    document.getElementById("sku_check").style.color="red";
                     $("button[type='submit']").attr("disabled", true)
                 } else if (data == "valid") {
                     $("#sku_check").text("")

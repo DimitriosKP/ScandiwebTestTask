@@ -1,6 +1,6 @@
 <?php
     $pageTitle = 'Product Add';
-    require_once 'header.php';
+    require_once 'includes/header.inc.php';
 ?>
 <body>
     <div class="container">

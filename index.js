@@ -5,7 +5,7 @@ $(document).ready(function () {
             var Products = JSON.parse(data);
 
             for (var i = 0; i < Products.length; i++) {
-                $(".row").append("<div class='col-sm-3'>" + "<div class='p-2 border bg-light' style='border-radius: 3%;' id='product" + i+ "'></div>");
+                $(".row").append("<div class='col-sm-3'>" + "<div class='p-2 border bg-light' style='border-radius: 3%; padding-bottom: 25px !important;' id='product" + i + "'></div>");
 
                 switch (Products[i]['type']) {
                     case ('dvd'):

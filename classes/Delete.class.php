@@ -1,6 +1,6 @@
 <?php
 
-    class Connection {
+    class Delete {
         
         protected $pdo;
         
