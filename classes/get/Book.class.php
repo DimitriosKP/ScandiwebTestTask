@@ -7,5 +7,4 @@
         public function get() {
           return "SELECT * FROM `book`";
         }
-
 }

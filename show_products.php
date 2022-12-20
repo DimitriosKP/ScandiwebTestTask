@@ -2,26 +2,32 @@
 
     require_once 'includes/config.inc.php';
 
-    use get\Dvd as DVD_show;
-    use get\Book as BOOK_show;
-    use get\Furniture as FURNITURE_show;
+    use get\Dvd as ShowDvds;
+    use get\Book as ShowBooks;
+    use get\Furniture as ShowFurnitures;
     
     if ($_SERVER["REQUEST_METHOD"] == "GET") {
 
-        $dvd = new DVD_show();
+        //create an array `dvds` with all DVDs
+        $dvd = new ShowDvds();
         $sql_dvd = $dvd->get();
-        $row_dvd = $pdo->query($sql_dvd); //return "SELECT * FROM `dvd`";
-        $dvds = $row_dvd->fetchAll(); //array `dvds` with all DVDs
-
-        $book = new BOOK_show();
-        $sql_book = $book->get();
-        $row_book = $pdo->query($sql_book); //return "SELECT * FROM `book`";
-        $books = $row_book->fetchAll(); //array `books` with all Books
+        $row_dvd = $pdo->prepare($sql_dvd); //return "SELECT * FROM `dvd`";
+        $row_dvd->execute();
+        $dvds = $row_dvd->fetchAll(); 
         
-        $furniture = new FURNITURE_show();
+        //create an array `books` with all Books
+        $book = new ShowBooks();
+        $sql_book = $book->get();
+        $row_book = $pdo->prepare($sql_book); //return "SELECT * FROM `book`";
+        $row_book->execute();
+        $books = $row_book->fetchAll(); 
+
+        //create an array `furns` with all Furnitures
+        $furniture = new ShowFurnitures();
         $sql_furniture = $furniture->get();
-        $row_furn = $pdo->query($sql_furniture); //return "SELECT * FROM `furniture`";
-        $furns = $row_furn->fetchAll(); //array `furns` with all Furnitures
+        $row_furn = $pdo->prepare($sql_furniture); //return "SELECT * FROM `furniture`";
+        $row_furn->execute();
+        $furns = $row_furn->fetchAll(); 
 
         $total = array_merge($dvds, $books, $furns);
 

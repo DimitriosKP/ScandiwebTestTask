@@ -18,7 +18,7 @@
                 $sql_furn = "DELETE FROM `furniture` WHERE sku = '".$val."'";
 
                 $conn = new Delete($pdo);
-                $conn->connect($sql_prod, $sql_dvd, $sql_book, $sql_furn);
+                $conn->delete($sql_prod, $sql_dvd, $sql_book, $sql_furn);
             }
         }
 

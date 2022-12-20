@@ -8,7 +8,7 @@
             $this->pdo = $pdo;
         }
 
-        public function connect() {
+        public function delete() {
             $params = func_get_args();
             foreach ($params as $sql) {
                 $this->pdo->query($sql);
