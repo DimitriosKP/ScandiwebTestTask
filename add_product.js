@@ -17,6 +17,15 @@ $(document).ready(function () {
     } );
 } );
 
+$(document).ready(function () {
+    $.get("includes/isEmpty.inc.php", function (data) {
+        if (data == "valid") {
+            $("#delete-product-btn").attr("disabled", true);
+        } else if (data == "invalid") {
+            $("#delete-product-btn").attr("disabled", false);
+        }
+    });
+});
 
 function changed(obj) {
     var options = document.querySelectorAll('.option')

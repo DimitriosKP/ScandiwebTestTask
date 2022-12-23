@@ -26,23 +26,20 @@
             <div class="main-content" style="display: inline-block;">
                 <div class="wrap-grid">
                     <h3>SKU</h3>
-                    <input class="form-control" type="text" id="sku"
-                        name="sku" placeholder="#sku" required
+                    <input class="form-control" type="text" name="sku" id="sku" placeholder="#sku" required
                         oninvalid="this.setCustomValidity('Please, submit required data')"
                         oninput="setCustomValidity('')"/>
                     <span id="sku_check"></span>
                 </div>
                 <div class="wrap-grid">
                     <h3>Name</h3>
-                    <input class="form-control" type="text" id="name"
-                        name="name" placeholder="#name" required
+                    <input class="form-control" type="text" name="name" id="name" placeholder="#name" required
                         oninvalid="this.setCustomValidity('Please, submit required data')"
                         oninput="setCustomValidity('')"/>
                 </div>
                 <div class="wrap-grid">
                     <h3>Price ($)</h3>
-                    <input class="form-control" type="number" id="price"
-                        name="price" placeholder="#price"  min="0" required
+                    <input class="form-control" type="number" name="price" id="price" placeholder="#price"  min="0" required
                         oninvalid="this.setCustomValidity('Please, submit required data')"
                         oninput="setCustomValidity('')"/>
                 </div>
@@ -58,8 +55,7 @@
                 <div class="wrap-grid" id="grid">
                     <div class="option" id="dvd" style="display: none;">
                         <h3>Size (MB)</h3>
-                        <input class="form-control" id="size" type="text"
-                            placeholder="#size" name="size"  min="0" 
+                        <input class="form-control" type="text" name="size" id="size" placeholder="#size" min="0" 
                             oninvalid="this.setCustomValidity('Please, provide size')"
                             oninput="setCustomValidity('')"/>
                     </div>
@@ -67,8 +63,7 @@
                 <div class="wrap-grid" id="grid">
                     <div class="option" id="furniture" style="display: none;">
                         <h3>Height (CM)</h3>
-                        <input class="form-control" id="height"
-                            type="number" name="height" placeholder="#height"  min="0"
+                        <input class="form-control" type="number" name="height" id="height" placeholder="#height" min="0"
                             oninvalid="this.setCustomValidity('Please, provide height')"
                             oninput="setCustomValidity('')"/><br>
                         <h3>Width (CM)</h3>
@@ -77,8 +72,7 @@
                             oninvalid="this.setCustomValidity('Please, provide width')"
                             oninput="setCustomValidity('')"/><br>
                         <h3>Length (CM)</h3>
-                        <input class="form-control" id="length" 
-                            type="number" name="length" placeholder="#length" min="0"
+                        <input class="form-control"  type="number" name="length" id="length" placeholder="#length" min="0"
                             oninvalid="this.setCustomValidity('Please, provide width')"
                             oninput="setCustomValidity('')"/>
                     </div>
@@ -86,8 +80,7 @@
                 <div class="wrap-grid" id="grid">
                     <div class="option" id="book" style="display: none;">
                         <h3>Weight (KG)</h3>
-                        <input class="form-control" id="weight"
-                            type="number" placeholder="#weight" name="weight" step="0.01" min="0"
+                        <input class="form-control" type="number" name="weight" id="weight" placeholder="#weight" step="0.01" min="0"
                             oninvalid="this.setCustomValidity('Please, provide weight')"
                             oninput="setCustomValidity('')"/>
                     </div>

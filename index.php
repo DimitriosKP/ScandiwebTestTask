@@ -15,13 +15,14 @@
         </div>
         <hr>
         <!--Success or error message. Dies after 3 secs-->
-        <?php if (isset( $_SESSION['error'])) {
-            echo '<div class="alert alert-danger">'.urldecode($_SESSION['error']).'</div>';
-            unset($_SESSION['error']);
-        } elseif (isset( $_SESSION['success'])) {
-            echo '<div class="alert alert-success" id="message">Success!</div>';
-            unset($_SESSION['success']);
-        }
+        <?php 
+            if (isset( $_SESSION['error'])) {
+                echo '<div class="alert alert-danger">'.urldecode($_SESSION['error']).'</div>';
+                unset($_SESSION['error']);
+            } elseif (isset( $_SESSION['success'])) {
+                echo '<div class="alert alert-success" id="message">Success!</div>';
+                unset($_SESSION['success']);
+            }
         ?>
         <script>
             setTimeout(function() {
